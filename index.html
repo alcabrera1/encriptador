@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>
+                <img src="img/Logo.svg" alt="">
+            </h1>
+        </div>
+    </header>
+    <div class="contenedor_principal">
+        <div class="contenedor_encriptar">
+            <textarea type="text" placeholder="Ingrese texto aquí" autofocus id="mensaje" class="textarea_msn" cols="60"
+                rows="30" required
+                onkeypress="return ((event.charCode>=97 && event.charCode <=122)||(event.charCode==32))"></textarea>
+            <div class="leyenda">
+                <p>&#10071&#10071 Solo letras minúsculas y sin acentos.</p>
+            </div>
+            <div class="contenedor_botones">
+                <button class="btn_encripta" type="button" onclick="encriptar()">
+                    Encriptar
+                </button>
+                <input class="btn_desencripta" value="Desencriptar" type="button" id="desencripta"
+                    onclick="desencriptar();">
+            </div>
+        </div>
+    </div>
+    <div class="contenedor_encriptado">
+        <div class="caja_imagen imagen">
+            <img src="img/Muñeco.svg" alt="">
+        </div>
+        <!-- <img src="img/Muñeco.svg" alt="" id="muñeco" /> -->
+        <div class="texto_informativo" id="mensaje_encriptado">
+            <h2 id="mensaje_informativo">Ningún mensaje fue encontrado</h2>
+            <p id="parrafo">
+                Ingresa el texto que deseas encriptar o desencriptar
+            </p>
+        </div>
+        <div class="caja_copiar">
+            <input value="&#8647 Copiar y Pegar" class="btn_copia" type="button" id="copia" onmousedown="copiar();">
+        </div>
+        <!-- Dejo una etiqueta parrafo para llenarla con el resultado del texto encriptado o desencriptado -->
+        <div class="contenedor-resultado">
+            <p id="parrafo_llenado" class="texto-resultado"></p>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Creado por Augusto Cabrera
+        </p>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
